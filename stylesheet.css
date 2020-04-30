@@ -1,0 +1,437 @@
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+/* remove body's style and limited the width and height of my page */
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    width: 1240px;
+    height: 500px;
+}
+
+/* head */
+.header {
+  background-color:#6dc7ec;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+}
+
+
+/* navigation */
+/* Remove the default unordered list style and set nav's width, height, and font size*/
+#nav 
+{ 
+    margin:0px;
+    padding: 10px; 
+    font-family: arial, sans-serif; 
+    position: relative; 
+    width: 390px; 
+    height:56px; 
+    font-size:14px; 
+    color:#999; 
+    margin: 0 auto;  
+} 
+#navhead
+{
+    border-left:1px solid #e9e9e9;
+}
+#nav ul 
+{
+    margin:0px; 
+    padding: 0px;  
+    list-style-type: none; 
+} 
+
+/* Using left float to set the horizontial navigation*/
+#nav ul li 
+{ 
+    float: left; 
+    position: relative; 
+} 
+/* let <a> tag look like a button */
+#nav ul li a 
+{ 
+    text-align: center; 
+    border-right:1px solid #e9e9e9; 
+    padding:20px; 
+    display:block; 
+    text-decoration:none; 
+    color:#999; 
+} 
+/* using "display" to conceal the drop-down menu, and show it when the cursor hover */
+#nav ul li ul 
+{
+    margin:0px; 
+    padding: 0px;  
+    display: none 
+} 
+#nav ul li:hover ul 
+{ 
+    display: block; 
+    position: absolute; 
+} 
+/* set the style for the hover state of the drop-down menu */
+#nav ul li:hover ul li a 
+{ 
+    display:block; 
+    background:#12aeef; 
+    color:#ffffff; 
+    width: 110px; 
+    text-align: center; 
+    border-bottom: 1px solid #f2f2f2; 
+    border-right: none; 
+} 
+#nav ul li:hover ul li a:hover 
+{ 
+    background:#6dc7ec; 
+    color:#fff; 
+} 
+/* index the current page */
+/* #here
+{
+    color:#fff; 
+    background:#6dc7ec;
+    
+} */
+
+
+
+/* text */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+a.intext
+{
+   text-decoration: none;
+}
+
+
+div.text
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    text-align: justify;
+}
+
+h1,h2
+{
+    font-family: 'Comfortaa', cursive;
+}
+
+#coronavirus_data
+{
+    font-family: 'Comfortaa', cursive;
+}
+
+
+
+/* backgroud */
+
+nav
+{
+     background-color:#ffffff;
+}
+
+div.text
+{
+    padding-top: 10px;
+    background:url('img/bg1.png')  no-repeat center center;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+    
+}
+
+div.textblock
+{
+    width: auto;
+    padding: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border:5px solid #e9e9e9; 
+}
+
+
+
+
+/* button */
+
+.button {
+    /* background-color: #e7e7e7; 
+    color: black;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; */
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+/* img */
+.img_header
+{
+    float: left;
+    width: 120px;
+    margin-right: 20px;
+
+}
+
+.img_left
+{
+    float: left;
+    margin-right: 20px;
+    padding: 3px;
+    background:  #f2f2f2;
+    border:1px solid #bdbcbc;
+    font-size: xx-small;
+    width: 220px;
+}
+.img_right
+{
+    float: right;
+    margin-left: 15px;
+    padding: 3px;
+    background:  #f2f2f2;
+    border:1px solid #bdbcbc;
+    font-size: small;
+    width: 240px;
+}
+
+
+/* codes display  */
+
+span.intextcode
+{
+    border:.5px solid #bdbcbc; 
+    background:  #f2f2f2;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    
+}
+.js_code
+{
+    border:.5px solid #bdbcbc; 
+    background:  #f2f2f2;
+    text-align: left;
+    padding-bottom: 15px ;
+    padding-top: 15px;
+}
+#codes_result
+{
+    float: right;
+    width: 25%;
+    margin-left: 0px;
+    display: table-cell;
+}
+#des 
+{
+    font-size: small;
+    color: tomato;
+}
+/* code table */
+#codes_table 
+{
+    float: left;
+    width: 30%;
+    margin-right: 0px;
+}
+
+#codes_table td,#codes_table th
+{
+    text-align: center;
+    height: 40px;
+}
+#codes_table tr:nth-child(odd) {background-color: #f2f2f2;}
+#codes_table tr:hover {background-color: #f5f5f5;}
+
+/* Clear the float after the column */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - change to up and down layout if less than 600 px */
+/* it might not work well*/
+@media screen and (max-width: 600px) {
+  #codes_table,#codes_result {
+    clear:both;
+    width: auto;
+    padding: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border:5px solid #e9e9e9; 
+  }
+}
+/* Display Pseudo-classes code's result, used by function PC_code_display(code, describe) */
+#visited_link:link
+{
+    color: purple;
+} 
+.link:link { color:red; }	
+.visited:visited { color:red; }	
+.hover:hover { color:red; }	
+.active:active { color:red; }	
+.first-child:first-child{ color:red; }
+
+
+
+
+
+
+/* Js code select */
+
+select{
+    height: 60px;
+    border: 0.5px solid #bdbcbc; 
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive
+}
+
+#icon
+{
+    margin:0px;
+    padding-top: 40px;
+    padding-left: 12.5%; 
+    padding-right: 12.5%;
+    /* float: left; */
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/* ajax get coronavirus data*/
+
+form.coronavirus_ask
+{
+    font-family:'Comfortaa', cursive ;
+}
+
+img.loading
+{
+    height: 200px;
+    width: auto;
+    display:block;
+    margin: 0 auto;
+}
+
+.input_text
+{
+    margin: 10px;
+    padding: 5px;
+    display:block;
+    border-radius: 5px;
+}
+#input_block
+{
+    float: left;
+    width: 20%;
+    height: 300px;
+    margin-right: 0px;
+}
+#chart_block
+{
+    float: right;
+    width: 35%;
+    margin-left: 0px;
+    height: 300px;
+    display: table-cell;
+}
+#echarts_post
+{
+    margin-left: 0px;
+    padding-left: 0px;
+    width: auto;
+    height:300px;
+}
+
+
+
+/* cv display */
+
+#col_cv1,#col_cv3
+{
+    background-color:#e9e9e9;
+    border:1px solid  #bdbcbc; 
+    padding: 5px;
+    margin-left: 20px;
+    float: right;
+    text-align: center;
+    font-size: smaller;
+    width: 250px;
+    
+}
+#col_cv2,#col_cv4
+{
+    background-color:#e9e9e9;
+    border:1px solid  #bdbcbc; 
+    padding: 5px;
+    margin-left: 0px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+    font-size: smaller;
+    width: 250px;
+}
+#col_cv3
+{
+    background-color:#e9e9e9;
+    border:1px solid  #bdbcbc; 
+    padding: 5px;
+    margin-left: 20px;
+    float: right;
+    text-align: center;
+    font-size: smaller;
+    width: 300px;
+    
+}
+img.cv_photo
+{
+    margin: 0 auto;
+    height: 250px;
+}
+table.cv_table
+{
+    text-align: left;
+    border-collapse: separate;
+    border-spacing:5px 10px;
+    /* vertical-align: top; */
+}
+
+.cv_table tr td:nth-child(1) /* select the first col in table */
+{
+    vertical-align: top;
+    font-weight: bolder; 
+    width: 35%;
+}
+.cv_table tr td:nth-child(2)
+{
+    font-size: smaller;
+}
+
+/* foot */
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+  font-family: initial;
+}
+
+
+

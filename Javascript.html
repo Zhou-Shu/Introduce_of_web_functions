@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        @import url("stylesheet.css");
+    </style>
+    <link href="external_module//prism.css" rel="stylesheet" />
+    <script src="functions.js"></script>
+    <script src="Syntax_highlight.js"></script>
+    <script src="external_module//echarts//dist//echarts.min.js"></script>
+    <script src="external_module//prism.js"></script>
+</head>
+
+<!-- the structure of this page is similar with the last one -->
+<body onload="Syntax_highlight();">
+    <div class="header">
+        <h1>Javascript</h1>
+        <p>A lightweight programming language</p>
+    </div>
+
+    <nav id="nav">
+        <ul>
+            <li id="navhead"><a href="HTML.html">HTML</a>
+                <ul>
+                    <li><a href="HTML.html#introduction">Introduction</a></li>
+                    <li><a href="HTML.html#codes_table">HTMLtag</a></li>
+                    <li><a href="HTML.html#history">History</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="CSS.html">CSS</a>
+                <ul>
+                    <li><a href="CSS.html#introduction">Introduction</a></li>
+                    <li><a href="CSS.html#Selector">Selectors</a></li>
+                    <li><a href="CSS.html#codes_table">Pseudo-classes</a></li>
+                    <li><a href="CSS.html#history">History</a></li>
+                </ul>
+            </li>
+            <li><a href="Javascript.html">Javascript</a>
+                <ul>
+                    <li><a href="Javascript.html#introduction">Introduction</a></li>
+                    <li><a href="Javascript.html#Basic_Syntax">Basic Syntax</a></li>
+                    <li><a href="Javascript.html#DOM">DOM</a></li>
+                    <li><a href="Javascript.html#AJAX">AJAX</a></li>
+                    <li><a href="Javascript.html#history">History</a></li>
+                </ul>
+            </li>
+            <li><a href="Author.html">Authors</a>
+                <ul>
+                    <li><a href="Author.html#Tim">Tim Berners-Lee</a></li>
+                    <li><a href="Author.html#Lie">Håkon Wium Lie</a></li>
+                    <li><a href="Author.html#Eich">Brendan Eich</a></li>
+                    <li><a href="Author.html#About_me">About me</a></li>
+                </ul>
+            </li>
+    
+        </ul>
+    </nav>
+
+
+
+    
+    <div class="text">
+        <!-- introduction -->
+        <div class="textblock">
+            <h2 id="introduction">Introduction</h2>
+            <br>
+            <p>
+                <img src="img//Javascript-shield.png" alt="fail" class="img_header">
+            
+                <b>JavaScript </b>, often abbreviated as JS, is a programming language that conforms to the ECMAScript
+                specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket
+                syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+                <br>
+                <br>
+                Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. JavaScript enables
+                interactive web pages and is an essential part of web applications. The vast majority of websites use it for
+                client-side page behavior, and all major web browsers have a dedicated JavaScript engine to execute it.
+                <br>
+                <br>
+                As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative programming styles. It
+                has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data
+                structures, and the Document Object Model (DOM). However, the language itself does not include any input/output
+                (I/O), such as networking, storage, or graphics facilities, as the host environment (usually a web browser) provides
+                those APIs.
+                <br>
+                <br>
+                Originally used only in web browsers, JavaScript engines are now embedded in server-side website deployments, often
+                via Node.js. They are also embedded in a variety of applications created with frameworks such as Electron and
+                Cordova.
+                <br>
+                <br>
+                Although there are similarities between JavaScript and Java, including language name, syntax, and respective
+                standard libraries, the two languages are distinct and differ greatly in design.
+            </p>
+        </div>
+
+        <!-- Basic Syntax of js -->
+        <!-- because of the pre tag this part is a little bit mess -->
+        <div class="textblock" >
+            <h2 id="Basic_Syntax">Basic Syntax</h2>
+            <hr>
+            <br>
+            <h3>Where to put</h3>
+            <p>In HTML, JavaScript code is inserted between
+            <span class="intextcode">&lt;script&gt;</span> and <span class="intextcode">&lt;/script&gt;</span> tags.</p>
+             
+            <pre class="js_code"><code class="language-js">&lt;script&gt;
+    document.getElementById("demo").innerHTML = "My First JavaScript";
+&lt;/script&gt;</code></pre>
+            
+            <p>
+                Scripts can also be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.
+            </p>
+            <p>For example:</p>
+             <code>
+            <span class="intextcode">&lt; body onload=&quot; Syntax_highlight(); Js_Syntax_highlight(); &quot; &gt;</span>
+            </code>
+            <br>
+            <p>External scripts can be referenced with a full URL or with a path relative to the current web page, like follow:</p>
+            <span class="intextcode">&lt; script src= &quot; functions.js &quot;&gt; &lt; /script &gt;</span>
+            
+            <br>
+            <br>
+
+            <h3>Set Variables</h3>
+            <p>
+                Variables in JavaScript can be defined using either the "var", "let" or "const" keywords.
+            </p>
+            <pre class="js_code"> <code  class="language-js">
+var x;
+const z = "this value cannot be reassigned!";
+let y;
+            </code></pre>
+            <p> <i style="font-size: smaller;">The keyword `const` means constant, hence the variable cannot be reassigned as the value is `constant`.</i></p>
+            <p>JavaScript is a dynamically-typed language, so this is legal.</p>
+            <pre class="js_code"> <code  class="language-js">z = "something" ;</code></pre>
+            
+            <br>
+
+            <h3>JavaScript IO</h3>
+            <p>There is no built-in Input/output functionality in JavaScript; However, most runtime environments have a <span class="intextcode">console</span> object that can be used to print output. Here is a minimalist
+            Hello World program in JavaScript:</p>
+            <pre class="js_code"> <code  class="language-js">console.log("Hello World!") ;</code></pre>
+
+            <p>In NodeJS you can access stdin, stdout, and stderr through the process object.</p>
+            <pre class="js_code"> <code  class="language-js">
+const readline = require('readline');
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout});
+rl.question('What do you think of Node.js? ', (answer) => 
+{console.log('Thank you for your feedback:', answer);rl.close();});
+            </code></pre>  
+        </div>
+
+        <!-- introduce of DOM -->
+        <div class="textblock">
+            <h2 id="DOM">DOM ( Document Object Model )</h2>
+            <br>
+            <p>
+                The Document Object Model is a platform- and language-neutral interface that will allow programs and scripts to dynamically access and update the content, structure and style of documents
+            </p>
+            <p>
+                The document can be further processed and the results of that processing can be incorporated back into the presented
+                page.
+            </p>
+            <p>The DOM standard is divided into three distinct parts:</p>
+            
+            <ol>
+            <li>Core DOM - the standard model for any structured document</li>
+            <li>XML DOM - the standard model for XML documents</li>
+            <li>HTML DOM - the standard model for HTML documents</li>             
+            </ol>
+            <p>The <b>HTML DOM model</b> is constructed as a tree of Objects:</p>
+            <img src="img//2020-03-28-13-51-25.png" alt="fail" style="width: 100%;">
+            <p>With the HTML DOM, all nodes in the tree are accessible through JavaScript. All HTML elements (nodes) can be modified, and nodes can be created or deleted. </p>
+            <p> For example, We can access a <span class= "intextcode">&lt;form&gt;</span> element by using HTML DOM and JS to test the HTML form validation. Instances are followed.</p>
+            
+        </div>
+
+        <!-- show some dom's instance -->
+        <div class="row">
+            <div class="textblock" id="codes_table">
+                <h2>DOM instance</h2>
+                <br>
+
+                <!-- user can choose a method/property they want -->
+                <!-- as long as the value of selecor change it will call the js_code_display() function -->
+                <select id="selector" onChange="JS_code_display();Js_Syntax_highlight();">
+                    <option value="0">document.getElementById( )</option>
+                    <option value="1">document.appendChild( )</option>
+                    <option value="2">document.removeChild( )</option>
+                    <option value="3">document.write( )</option>
+                    <option value="4">element.innerHTML</option>
+                    <option value="5">element.style</option>
+                    <option value="6">document.forms</option>                   
+                </select>
+                <!-- That funtion will return a example code in here -->
+                <h2>Code</h2>
+            
+            <pre class="js_code" id="change_js_code" ><code class="language-js"></code></pre>
+            </div>
+
+            <!-- This example code's result and describe will be showed below -->
+            <div class="textblock" id="codes_result">
+                <h2>Result</h2>
+                <br>
+                <div id="div1" style="font-size: x-large; font-family: 'Comfortaa', cursive;">
+                <p id="p1"> Here is the tag P1 </p>
+                <p id="p2">Here is the tag P2</p>
+                </div>
+                <br>
+                <h2>Describe</h2>
+                <p id="des"></p>
+            </div>
+        </div>
+
+        <!-- introduce of ajax -->
+        <div class="textblock" >
+            <h2 id="AJAX">AJAX ( Asynchronous JavaScript and XML )</h2>
+            <br>
+            <img src="img//2020-04-08-01-25-07.png" alt="fail" style="float:left; width: 500px; height: 350px; margin-right: 20px; margin-bottom: 10px;">
+            <p> <b>Ajax</b> is a set of web development techniques using many web technologies on the client side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behavior of the existing page.</p>
+            
+            <p> By decoupling the data interchange layer from the presentation layer, Ajax allows web pages and, by extension, web applications, to change content dynamically without the need to reload the entire page.</p>
+            <p><u>In practice, modern implementations commonly utilize JSON instead of XML.</u></p> 
+            <p>A AJAX instance is showed below, which is using Ajax to get Coronavirus Data</p>
+        </div>
+
+        <!-- using Ajax to get Coronavirus Data -->
+        <div class="row">
+            <div class="textblock" id="input_block" >
+                <h2>Coronavirus Data</h2>
+                <!-- get value from user -->
+                <form class="coronavirus_ask">
+                    country_code: <input class="input_text" id="country_code" type="text" value="cn">
+                    country: <input class="input_text" id="country" type="text" value="China">
+                    province: <input class="input_text" id="province" type="text" value="Hubei">
+                </form>
+                <br>
+                <!-- call the get_coronavirus_data() funtion to get and process coronavirus data   -->
+                <button class="button" type="button" onclick="get_coronavirus_data();">get coronavirus data</button>
+                
+            </div>
+
+            <!-- coronavirus data will be generated to a chart, and be posted here -->
+            <div class="textblock" id="chart_block">
+                <div id="coronavirus_data"></div>
+            </div>
+        </div>
+
+        <!-- History -->
+        <div class="textblock" id="history">
+            
+            <img src="img//js_history.jpg"  alt="fail" style="float:left; width: 500px; margin-right: 10px; margin-bottom: 5px;">
+
+            <p>JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. It was inspired by Java, Scheme and Self.</p>
+            <p>
+            JavaScript has a rich and fascinating history. It continues to be one of the most hated languages on the planet, often for reasons that have long since faded into irrelevance.
+
+            <p>LiveWire and the powerful nature of the language betray the true ambitions of Andreessen and the Netscape team, foreshadowing a possible future beyond being just a Java companion.</p>
+
+            <p>The huge companies that dominate the technical landscape have repeatedly tried to supplant JavaScript. First Sun, then Microsoft (VBScript), then Adobe, then Microsoft again (Silverlight), then Google, and then, arguably with TypeScript, Microsoft yet again. And yet JavaScript continues to thrive.
+            </p>
+            <p>
+            JavaScript has become the de-facto standard programming language of the Web, not only because of its first-mover advantage, but because it is open, standardized, and, most importantly a very good language; well-suited to the Web with its dynamic nature and tight integration with the DOM.
+            </p>
+            <a href="https://medium.com/@benastontweet/lesson-1a-the-history-of-javascript-8c1ce3bffb17"> Here is more detail of JavaScript's history </a>
+        </div>
+
+        <div class="footer">
+            <p>Designed by Zhou Shu; Student ID: 22552162</p>
+            <p style="font-size: smaller; ">Some of the context on this web page comes from wikipedia and the W3C</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
